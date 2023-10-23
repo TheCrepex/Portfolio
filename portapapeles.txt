@@ -1,0 +1,16 @@
+.Inicio .Subtitulo span{
+    font-size: 200px;
+    -webkit-background-clip: text;
+	background-clip: text;
+	background-image: url('./assets/Forest.jpg');
+	color: transparent;
+}
+
+
+body{
+    background-color: $--color-Obscuro;
+    display: grid;
+    gap: 1rem;
+    grid-template-rows: 20vh repeat(3,100vh) 1rem ;
+    grid-template-columns: repeat(auto-fill, minmax(15rem,1fr));
+}

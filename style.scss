@@ -1,0 +1,251 @@
+$--color-Primario: #124559;
+$--color-Complementario: #FFE634;
+$--color-SegundoComplementario: #03B5AA;
+$--color-TercerComplementario: #037069;
+$--color-Obscuro: #010f14;
+$--color-Claro: #91C7B1;
+$--color-Texto: #FFFFFF;
+
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    display: grid;
+    grid-template-areas:
+        "Header"
+        "About"
+        "Tecno"
+        "Portfolio"
+        "Foot";
+    grid-template-rows: 10vh repeat(4, 100vh);
+    gap: 1rem;
+    background-color: $--color-Obscuro;
+}
+
+.Header {
+    position: fixed;
+    background-color: transparent;
+    grid-area: Header;
+    height: 10vh;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.Logo1 {
+    height: 80%;
+    flex: 1;
+}
+
+.Logo1 img {
+    margin-left: 10px;
+    height: 100%;
+}
+
+.Navbar {
+    flex: 2;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.Navbar ul {
+    display: flex;
+    flex-direction: row;
+}
+
+.Navbar ul li {
+    margin: 20px;
+    list-style: none;
+}
+
+.button {
+    height: 50px;
+    width: 200px;
+    position: relative;
+    background-color: transparent;
+    cursor: pointer;
+    border: 2px solid $--color-Complementario;
+    overflow: hidden;
+    border-radius: 30px;
+    color: #333;
+    transition: all 0.5s ease-in-out;
+}
+
+.btn-txt {
+    z-index: 1;
+    font-weight: 800;
+    letter-spacing: 4px;
+    color: $--color-Complementario;
+
+}
+
+.type1::after {
+    content: "";
+    top: 50%;
+    left: 0;
+    position: absolute;
+    transition: all 0.5s ease-in-out;
+    background-color: $--color-Primario;
+    border-radius: 30px;
+    visibility: hidden;
+    height: 10px;
+    width: 10px;
+    z-index: -1;
+}
+
+.type2::after {
+    content: "";
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transition: all 0.5s ease-in-out;
+    background-color: $--color-Primario;
+    border-radius: 30px;
+    visibility: hidden;
+    height: 10px;
+    width: 10px;
+    z-index: -1;
+}
+
+.button a {
+    text-decoration: none;
+}
+
+.type3::after {
+    content: "";
+    top: 50%;
+    right: 0;
+    position: absolute;
+    transition: all 0.5s ease-in-out;
+    background-color: $--color-Primario;
+    border-radius: 30px;
+    visibility: hidden;
+    height: 10px;
+    width: 10px;
+    z-index: -1;
+}
+
+
+
+.button:hover {
+    box-shadow: 1px 1px 200px #252525;
+    color: #fff;
+    border: none;
+}
+
+.type1:hover::after {
+    visibility: visible;
+    transform: scale(100) translateX(2px);
+}
+
+.type2:hover::after {
+    visibility: visible;
+    transform: scale(100) translateX(2px);
+}
+
+.type3:hover::after {
+    visibility: visible;
+    transform: scale(100) translateX(2px);
+}
+
+
+.About {
+    background-color: $--color-Obscuro;
+    grid-area: About;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.PrimerFila {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.Texto70px {
+    font-size: 70px;
+    color: $--color-Complementario;
+}
+
+
+.TextoConImagen {
+    font-family: 'Kanit', sans-serif;
+    font-size: 200px;
+    -webkit-background-clip: text;
+    background-clip: text;
+    background-image: url('./assets/Minimalistic.jpg');
+    color: transparent;
+    background-position: center;
+}
+
+.SegundaFila {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.SegundaFila img {
+    height: 70px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.TercerFila {
+    display: flex;
+    margin-top: 100px;
+    height: 25%;
+    width: 75%;
+    /*background-color: $--color-Primario;*/
+    border-radius: 3rem;
+    /*box-shadow: $--color-SegundoComplementario 5px 5px, $--color-TercerComplementario 10px 10px, $--color-SegundoComplementario 15px 15px, $--color-TercerComplementario 20px 20px, $--color-SegundoComplementario 25px 25px;
+*/
+}
+
+.TercerFila h4,h1 {
+    text-align: center;
+    margin: 30px;
+    color: $--color-Texto;
+}
+
+.TercerFila h1{
+    font-family: 'Bebas Neue', sans-serif;
+    color: $--color-Complementario;
+}
+
+.Texto50px{
+    font-size: x-large;
+    font-family: 'Roboto Condensed', sans-serif;
+    margin: 30px;
+}
+
+
+.Tecno {
+    top:0;
+    background-color: rgb(75, 12, 12);
+    grid-area: Tecno;
+}
+
+.Portfolio {
+    background-color: coral;
+    grid-area: Portfolio;
+}
+
+.Foot {
+    background-color: chartreuse;
+    grid-area: Foot;
+}
